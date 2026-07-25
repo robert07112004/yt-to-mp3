@@ -1,12 +1,20 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ FormsModule ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('front');
+
+  youtube_url = ""
+  submitted_url = ""
+
+  convertURL() {
+    this.submitted_url = this.youtube_url
+  }
+
 }
