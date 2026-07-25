@@ -7,13 +7,9 @@
   <input type="url" 
          placeholder="Paste the Youtube url here..." 
          required
-         name="input-url"
-         [(ngModel)]="youtube_url">
-  <button [disabled]="!youtube_url.trim()"
+         name="youtubeUrl"
+         [(ngModel)]="youtubeUrl">
+  <button [disabled]="!youtubeUrl.trim()"
           type="submit"
   >Convert to MP3</button>
 </form>
-
-@if (submitted_url) {
-  {{ submitted_url }}
-}
