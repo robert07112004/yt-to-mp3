@@ -3,6 +3,9 @@
 # File
 /ROADMAP.md
 
+# Temp mp3 files
+/backend/temp
+
 # Compiled output
 /*/dist
 /*/tmp

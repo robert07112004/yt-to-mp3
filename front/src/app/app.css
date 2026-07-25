@@ -50,3 +50,98 @@ button:disabled {
     color: #666666;
     cursor: not-allowed;
 }
+
+.loading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff0000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #1e1f29;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.video-title {
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.50rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 480px;
+    line-height: 1.4;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.error-box {
+    max-width: 500px;
+    margin: 3rem auto; 
+    padding: 1.5rem 2rem;
+    background-color: rgba(220, 53, 69, 0.15); 
+    border: 1px solid #dc3545;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.error-box p {
+    color: #ff6b6b; 
+    font-size: 1.5rem; 
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.5;
+    font-family: inherit;
+}

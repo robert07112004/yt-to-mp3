@@ -7,9 +7,36 @@
   <input type="url" 
          placeholder="Paste the Youtube url here..." 
          required
+         [disabled]="isLoading"
          name="youtubeUrl"
          [(ngModel)]="youtubeUrl">
   <button [disabled]="!youtubeUrl.trim()"
           type="submit"
   >Convert to MP3</button>
 </form>
+
+@if (isLoading) {
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <p>Converting video... Please wait a few seconds.</p>
+  </div>
+} 
+
+@if (videoData) {
+  <div class="result-card">
+    <img [src]="videoData.thumbnail" [alt]="videoData.title" class="thumbnail" />
+    
+    <div class="info">
+      <h3 class="video-title">{{ videoData.title }}</h3>
+      <a [href]="videoData.downloadUrl" (click)="downloadAndReset()" class="download-btn">
+        Download MP3
+      </a>
+    </div>
+  </div>
+}
+
+@if (errorMessage) {
+  <div class="error-box">
+    <p>{{ errorMessage }}</p>
+  </div>
+}
